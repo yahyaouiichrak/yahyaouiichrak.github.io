@@ -69,7 +69,7 @@ services:
 docker-compose up
 ```
 - ![part1](captures/docker-compose.png)
-- ![part1](captures/docker compose up.png)
+- ![part1](captures/docker-compose-up.png)
 
 - Test : `http://localhost:8005`
 
@@ -147,8 +147,8 @@ kubectl apply -f cv-service.yaml
 - URL : `http://<IP_NODE>:8006`
 
 ### 📸 Captures d'écran
-- ![kubectl](captures/kubctl get.png)
-- ![test](captures/test part2.png)
+- ![kubectl](captures/kubctl-get.png)
+- ![test](captures/test-part2.png)
 
 ---
 
