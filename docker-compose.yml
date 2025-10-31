@@ -1,0 +1,5 @@
+services:
+  cv:
+    image: yahyaouiichrak/cv:v1
+    ports:
+      - "8005:80"
