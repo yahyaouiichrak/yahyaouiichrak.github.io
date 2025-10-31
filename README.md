@@ -24,10 +24,16 @@ git commit -m "Version 1"
 git checkout -b dev
 ```
 
+- ![part1](captures/1.png)
+
 ### 4. Dépôt GitHub Pages
 - Nom du dépôt : `USERNAME.github.io`
 - Branches poussées : `main` et `dev`
 - Activation de GitHub Pages via les paramètres du dépôt
+
+- ![part1](captures/2.png)
+- ![part1](captures/4.png)
+- ![part1](captures/3.png)
 
 ### 5. Dockerisation du CV
 - Fichier `Dockerfile` :
@@ -44,6 +50,9 @@ docker build -t DockerHubUsername/cv:v1 .
 docker login
 docker push DockerHubUsername/cv:v1
 ```
+- ![part1](captures/5.png)
+- ![part1](captures/6.png)
+- ![part1](captures/7.png)
 
 ### 6. Déploiement avec Docker Compose
 - Fichier `docker-compose.yml` :
@@ -59,17 +68,12 @@ services:
 ```bash
 docker-compose up
 ```
+- ![part1](captures/docker-compose.png)
+- ![part1](captures/docker compose up.png)
+
 - Test : `http://localhost:8005`
 
-### 📸 Captures d'écran
-- ![1](captures/1.png)
-- ![2](captures/2.png)
-- ![3](captures/3.png)
-- ![4](captures/4.png)
-- ![5](captures/5.png)
-- ![6](captures/6.png)
-- ![7](captures/7.png)
-- ![8](captures/8.png)
+- ![part1](captures/8.png)
 
 ---
 
@@ -143,8 +147,8 @@ kubectl apply -f cv-service.yaml
 - URL : `http://<IP_NODE>:8006`
 
 ### 📸 Captures d'écran
-- ![K3S Dashboard](captures/k3s-dashboard.png)
-- ![CV sur K3S](captures/k3s-cv.png)
+- ![kubectl](captures/kubctl get.png)
+- ![test](captures/test part2.png)
 
 ---
 
