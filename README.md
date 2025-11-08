@@ -43,12 +43,12 @@ COPY . /usr/share/nginx/html
 ```
 - Création de l'image :
 ```bash
-docker build -t DockerHubUsername/cv:v1 .
+docker build -t DockerHubUsername/cv:v2 .
 ```
 - Push sur Docker Hub :
 ```bash
 docker login
-docker push DockerHubUsername/cv:v1
+docker push DockerHubUsername/cv:v2
 ```
 - ![part1](captures/5.png)
 - ![part1](captures/6.png)
@@ -60,7 +60,7 @@ docker push DockerHubUsername/cv:v1
 version: '3'
 services:
   cv:
-    image: DockerHubUsername/cv:v1
+    image: DockerHubUsername/cv:v2
     ports:
       - "8005:80"
 ```
@@ -116,7 +116,7 @@ spec:
     spec:
       containers:
       - name: cv
-        image: DockerHubUsername/cv:v1
+        image: DockerHubUsername/cv:v2
         ports:
         - containerPort: 80
 ```
@@ -134,7 +134,7 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 8006
+    nodePort: 30010
 ```
 
 ### 5. Déploiement sur K3S
@@ -144,11 +144,12 @@ kubectl apply -f cv-service.yaml
 ```
 
 ### 6. Test dans le navigateur
-- URL : `http://<IP_NODE>:8006`
+- URL : `http://<IP_NODE>:30010`
 
 ### 📸 Captures d'écran
-- ![kubectl](captures/kubctl-get.png)
-- ![test](captures/test-part2.png)
+
+- ![part2](captures/9.png)
+- ![part2](captures/10.png)
 
 ---
 
